@@ -1,6 +1,24 @@
 <h1>新規記事作成</h1>
 <%= form_for :article, url: articles_path do |f| %>
 
+<% if @article.errors.any? %>
+<div id="エラー説明">
+  <h2>
+    <%= pluralize(@article.errors.count, "error") %>
+    この記事は保存できません。
+  </h2>
+
+  <p>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li>
+      <%= msg %>
+    </li>
+  </ul>
+  <% end %>
+  </p>
+</div>
+<% end %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
