@@ -6,15 +6,20 @@
   <%= @article.text %>
 </p>
 <hr>
-<h2> Comments </h2>
+<h2> コメント一覧 </h2>
   <% @article.comments.each do |comment| %>
   <p>
     <strong>Commenter</strong>
     <%= comment.commenter %>
   </p>
 <p>
-  <strong>Coment</strong>
+  <strong>コメント</strong>
   <%= comment.body %>
+</p>
+<p>
+  <%= link_to 'コメントを削除します', [comment.article, comment],
+  method: :Delete,
+  data: {confirm: '本当に削除しますか?'} %>
 </p>
 <% end %>
 
