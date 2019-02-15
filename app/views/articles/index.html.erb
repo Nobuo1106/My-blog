@@ -1,4 +1,7 @@
 <h1> 記事リスト</h1>
+<p>
+  <%= link_to '新規記事作成', new_article_path %>
+</p>
 
 <table>
 <tr>
@@ -14,7 +17,7 @@
     <%= truncate(article.text, length: 75) %>
   </td>
   <td> |
-    <%= link_to 'リスト', article_path(article) %>
+    <%= link_to '記事詳細', article_path(article) %>
   </td>
   <td> |
     <%= link_to '編集', edit_article_path(article) %>
