@@ -1,0 +1,15 @@
+<h3> The Rendered Form </h3>
+<h2> コメント追加 </h2>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<p>
+  <%= f.label :commenter %><br>
+  <%= f.text_field :commenter %>
+</p>
+<p>
+  <%= f.label :body %><br>
+  <%= f.text_area :body %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

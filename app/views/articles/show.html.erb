@@ -1,43 +1,22 @@
-<p><strong>Title:</strong>
+
+<p>
+  <strong>Title:</strong>
   <%= @article.title %>
+</p>
+<p>
+  <%= @article.created_at %>
 </p>
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
 <hr>
-<h2> コメント一覧 </h2>
-  <% @article.comments.each do |comment| %>
-  <p>
-    <strong>Commenter</strong>
-    <%= comment.commenter %>
-  </p>
-<p>
-  <strong>コメント</strong>
-  <%= comment.body %>
-</p>
-<p>
-  <%= link_to 'コメントを削除します', [comment.article, comment],
-  method: :Delete,
-  data: {confirm: '本当に削除しますか?'} %>
-</p>
-<% end %>
+
+<%= render 'comments/comment' %>
 
 <hr>
-<h2> コメント追加 </h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
-<p>
-  <%= f.label :commenter %><br>
-  <%= f.text_field :commenter %>
-</p>
-<p>
-  <%= f.label :body %><br>
-  <%= f.text_area :body %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+
+<%= render 'comments/form' %>
 
 <p>
   <%= link_to 'Back', articles_path %>
