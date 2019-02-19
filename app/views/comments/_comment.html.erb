@@ -12,7 +12,8 @@
   <%= comment.body %>
 </p>
 <p>
-  <%= link_to 'コメントを削除します', [comment.article, comment],
+  <%= link_to 'コメント削除', [comment.article, comment],
+  class: 'btn btn-md btn-danger',
   method: :Delete,
   data: {confirm: '本当に削除しますか?'} %>
 </p>

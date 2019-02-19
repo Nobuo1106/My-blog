@@ -1,34 +1,45 @@
+<div class="row">
+<div class="col"></div>
+<div class="col-md-10">
 <h1> 記事リスト</h1>
 <p>
-  <%= link_to '新規記事作成', new_article_path %>
+  <%= link_to '新規記事作成', new_article_path, class:'btn btn-lg btn-info' %>
 </p>
 
-<table>
+<table class="table table-hover">
+<thead>
 <tr>
   <th>Title</th>
   <th>Text</th>
-  <th colspab = "3">投稿内容 編集 削除</th>
+  <th colspab = "3">Editing Options</th>
 </tr>
+</thead>
+<tbody>
 <% @articles.each do |article| %>
 <tr>
-  <td>|
+  <td>
     <%= article.title %>
-  </td> |
+  </td>
   <td>
     <%= truncate(article.text, length: 75) %>
   </td>
-  <td> |
-    <%= link_to '記事詳細', article_path(article) %>
+  <td>
+    <%= link_to 'SHOW', article_path(article), class: 'btn btn-sm btn-info' %>
   </td>
-  <td> |
-    <%= link_to '編集', edit_article_path(article) %>
+  <td>
+    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning' %>
   </td>
-  <td> |
-    <%= link_to '削除', article_path(article), method: :Delete, data: {confirm: '本当に削除しますか ?'} %>
+  <td>
+    <%= link_to 'Delete',article_path(article), class: 'btn btn-sm btn-danger',
+    method: :Delete, data: {confirm: '本当に削除しますか ?'} %>
   </td>
 </tr>
 <% end %>
+</tbody>
 </table>
 <p>
-  <%= link_to 'Home', welcome_index_path %>
+  <%= link_to 'Home', welcome_index_path, class: 'btn btn-sm btn-info' %>
 </p>
+</div>
+<div class="col"></div>
+</div>
