@@ -13,18 +13,54 @@
  */
 
 @import "bootstrap";
+@import "welcome";
+@import "navigation";
+@import "footer";
 
+body {
+  min-height: 50rem;
+  padding-top: 4.5rem;
+  background-color: #BAD3FF;
+  overflow-x: hidden;
+}
 
-.container
-{padding-top:15px;}
+.white {
+  color: #ffffff;
+}
 
-thead
-{
+.gray {
+  color: #ddcccc;
+}
+
+.samll-font {
+  font-size: 11px;
+}
+
+.linktxt {
+  color: #deddee;
+}
+
+.linktxt:hover {
+  color: #ffffff;
+}
+
+.container {
+  padding-top:15px;
+}
+
+thead {
   background-color: #dddddd;
 }
 
-.form-control
-{
+.form-control {
   background-color: #efeeef;
-  border: 2px solid #BBBBBB;
+  border: 3px solid #000044;
+}
+
+.btn-light {
+  border: 3px solid #000044;
+}
+
+.jumbotron {
+  background-color: #ffffff;
 }

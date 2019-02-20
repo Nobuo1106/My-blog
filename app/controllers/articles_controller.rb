@@ -19,7 +19,7 @@ http_basic_authenticate_with name: "nobuo", password: "pokopoko", except: [:inde
   def update
     @article = Article.find_by(params[:id])
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to articles_path
     else
       render 'edit'
     end
@@ -28,7 +28,7 @@ http_basic_authenticate_with name: "nobuo", password: "pokopoko", except: [:inde
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article
+      redirect_to articles_path
     else
       render 'new'
     end
