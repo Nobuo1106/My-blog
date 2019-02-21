@@ -9,15 +9,15 @@ http_basic_authenticate_with name: "nobuo", password: "pokopoko", except: [:inde
   end
 
   def show
-    @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def edit
-    @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to articles_path
     else
