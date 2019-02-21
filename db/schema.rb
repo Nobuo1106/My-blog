@@ -27,5 +27,5 @@ ActiveRecord::Schema.define(version: 2019_02_15_020643) do
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
-
+  
 end
