@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col"></div>
+  <div class="col-md-10">
+    <h1>購読者リスト</h1>
+    <p>
+      <%= link_to '新規記事作成', new_article_path, class:'btn btn-lg btn-info' %>
+    </p>
+
+    <table class="table table-hover table-striped table-responsive-xs table-info">
+      <thead>
+        <tr>
+          <th>氏</th>
+          <th>名</th>
+          <th>メールアドレス</th>
+          <th>国</th>
+          <th>削除</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @subscribers.each do |subscriber| %>
+          <tr>
+            <td>
+              <%= subscriber.f_name %>
+            </td>
+            <td>
+              <%= subscriber.l_name %>
+            </td>
+            <td>
+              <%= subscriber.email %>
+            </td>
+            <td>
+              <%= subscriber.country %>
+            </td>
+            <td>
+              <%= link_to 'Delete',subscriber_path(subscriber), class: 'btn btn-sm btn-danger', method: :Delete, data: {confirm: '本当に削除しますか ?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <p>
+      <%= link_to 'Home', welcome_index_path, class: 'btn btn-sm btn-info' %>
+    </p>
+  </div>
+  <div class="col"></div>
+</div>

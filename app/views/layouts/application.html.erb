@@ -3,15 +3,26 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= render 'shared/navigation' %>
-  <div class="container">
-    <%= yield %>
-  </div>
-  <%= render 'shared/footer' %>
+    <%= render 'shared/navigation' %>
+    <div class="container">
+      <% if notice %>
+        <div class="show_notice">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="show_alert">
+          <%= alert %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
