@@ -10,6 +10,7 @@ before_action :admin_authorize, :only => [:destroy]
       redirect_to article_path(@article), notice: "コメントを投稿しました"
     else
       redirect_to article_path(@article), alert: "コメントを投稿できませんでした。"
+    end
   end
 
   def destroy
