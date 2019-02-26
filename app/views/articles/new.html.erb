@@ -1,7 +1,7 @@
-<div class="row" style="padding-top:10%">
+<div class="row" style="padding-top:0%">
   <div class="col"></div>
-  <div class="col-md-7">
-    <h1>新規記事作成</h1>
+  <div class="col-md-4">
+    <h3>新規記事作成</h3>
     <%= form_for :article, url: articles_path do |f| %>
 
     <% if @article.errors.any? %>
@@ -17,9 +17,12 @@
               <li>
                 <%= msg %>
               </li>
-            </ul>
+              </ul>
           <% end %>
         </p>
+        <% if alert %>
+          <%= alert %>
+        <% end %>
       </div>
     <% end %>
     <p>
@@ -39,6 +42,6 @@
     <%= link_to 'Back', articles_path, class: 'btn btn-md btn-info' %>
     <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
   </p>
-</div>
+  </div>
 <div class="col"></div>
 </div>

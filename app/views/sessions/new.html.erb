@@ -1,0 +1,17 @@
+<div class="row" style="padding-top:0%">
+  <div class="col"></div>
+  <div class="col-md-4">
+    <h1>ログインしてください。</h1>
+    <%= form_tag sessions_path do %>
+    <%= text_field_tag :userid, nil, placeholder: 'ユーザーID', class: 'form-control' %>
+    <%= password_field_tag :password, nil , placeholder: 'パスワード', class: 'form-control' %>
+    <%= submit_tag 'Sign In', class:"btn btn-light my-2 my-sm-0" %>
+    <% end %>
+
+    <p>
+      <%= link_to '記事一覧', articles_path, class: 'btn btn-md btn-info' %>
+      <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
+    </p>
+  </div>
+  <div class="col"></div>
+  </div>

@@ -1,0 +1,40 @@
+<div class="row" style="padding-top:10%">
+  <div class="col"></div>
+  <div class="col-md-7">
+    <h1>ユーザー登録</h1>
+    <%= form_for @user do |f| %>
+    <div class="field" style="100%;">
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@user.errors.count, "error") %>
+            ユーザー登録に失敗しました。
+          </h2>
+          <p>
+            <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+              <% end %>
+            </ul>
+          </p>
+          <% if alert %>
+            <%= alert %>
+          <% end %>
+        </div>
+      <% end %>
+      <%= f.text_field :userid, placeholder: 'ID', class: 'form-control' %><br>
+      <%= f.email_field :email, placeholder: 'email', class: 'form-control' %><br>
+      <%= f.password_field :password, placeholder: 'パスワード', class: 'form-control' %><br>
+      <%= f.password_field :password_confirmation, placeholder: 'パスワードを確認して下さい。', class: 'form-control' %><br>
+      <%= f.submit 'アカウント作成',  class:"btn btn-light my-2 my-sm-0"%>
+    <% end %>
+  </div>
+  <p>
+    <br><%= link_to '記事一覧', articles_path, class: 'btn btn-md btn-info' %>
+    <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
+  </p>
+</div>
+<div class="col"></div>
+</div>

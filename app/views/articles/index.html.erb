@@ -1,18 +1,22 @@
 <div class="row">
   <div class="col"></div>
   <div class="col-md-10">
-    <h1>
-      記事リスト</h1>
+    <h1>記事リスト</h1>
+    <% if current_user && current_user.admin? %>
     <p>
       <%= link_to '新規記事作成', new_article_path, class:'btn btn-lg btn-info' %>
     </p>
-
+    <% end %>
     <table class="table table-hover table-striped table-responsive-xs table-info">
       <thead>
         <tr>
           <th>Title</th>
           <th>Text</th>
-          <th colspan="3">Editing Options</th>
+        <% if current_user && current_user.admin? %>
+          <th colspan="3">編集オプション</th>
+        <% else %>
+          <th colspan="1">記事詳細</th>
+        <% end %>
         </tr>
       </thead>
       <tbody>
@@ -27,12 +31,14 @@
             <td>
               <%= link_to 'SHOW', article_path(article), class: 'btn btn-sm btn-info' %>
             </td>
+              <% if current_user && current_user.admin? %>
             <td>
               <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning' %>
             </td>
             <td>
               <%= link_to 'Delete',article_path(article), class: 'btn btn-sm btn-danger', method: :Delete, data: {confirm: '本当に削除しますか ?'} %>
             </td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

@@ -6,7 +6,7 @@ ruby '2.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~>1.3.6', groups: :development
+gem 'sqlite3', '~>1.3.6', groups: :developmentg
 gem 'pg', groups: :production 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -26,12 +26,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'rb-readline'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

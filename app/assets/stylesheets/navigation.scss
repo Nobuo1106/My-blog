@@ -1,5 +1,7 @@
 .navbar-nav
 {
+  font-size: 85%;
+  white-space: nowrap;
   background-color: #333333 !important;
 }
 
@@ -16,20 +18,13 @@
 .active_nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #f3cace !important;
+  color: #DDDDDD !important;
 }
 
 .nav-item a
 {
-  font-weight: bold;
-  color: #f3cace !important;
+  color: #DDDDDD !important;
 }
-
-.nav-item a{
-  font-weight: bold;
-  color: #f3cace;
-}
-
 .navbar-toggler{
   border: 2px solid #ffffff !important;
 }

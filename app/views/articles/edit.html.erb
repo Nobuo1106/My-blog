@@ -1,26 +1,26 @@
 <div class="row" style="padding-top:10%">
   <div class="col"></div>
   <div class="col-md-7">
-<h1>記事編集</h1>
-<%= form_for @article do |f| %>
+    <h1>記事編集</h1>
+    <%= form_for @article do |f| %>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.label :text %><br>
+      <%= f.text_area :text, class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.submit class: 'btn btn-lg btn-btn-success' %>
+    </p>
+  <% end %>
 
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= link_to 'Back', articles_path, class: 'btn btn-md btn-info' %>
+    <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
   </p>
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text, class: 'form-control' %>
-  </p>
-  <p>
-    <%= f.submit class: 'btn btn-lg btn-btn-success' %>
-  </p>
-<% end %>
-
-<p>
-  <%= link_to 'Back', articles_path, class: 'btn btn-md btn-info' %>
-  <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
-</p>
 </div>
 <div class="col"></div>
 </div>
