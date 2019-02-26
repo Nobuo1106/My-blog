@@ -23736,3 +23736,194 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:30:37 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (12.9ms)
+  Rendered shared/_footer.html.erb (6.8ms)
+Completed 200 OK in 185ms (Views: 176.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-26 17:30:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (16.9ms)
+  Rendered shared/_navigation.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (2.9ms)
+Completed 200 OK in 160ms (Views: 151.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2019-02-26 17:30:40 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 18]]
+  ↳ app/views/comments/_comment.html.erb:2
+  Rendered comments/_comment.html.erb (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered comments/_form.html.erb (10.7ms)
+  Rendered articles/show.html.erb within layouts/application (31.0ms)
+  Rendered shared/_navigation.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (3.6ms)
+Completed 200 OK in 118ms (Views: 111.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2019-02-26 17:30:43 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 18]]
+  ↳ app/views/comments/_comment.html.erb:2
+  Rendered comments/_comment.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered comments/_form.html.erb (3.2ms)
+  Rendered articles/show.html.erb within layouts/application (12.8ms)
+  Rendered shared/_navigation.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (2.5ms)
+Completed 200 OK in 132ms (Views: 125.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2019-02-26 17:30:44 +0900
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  [1m[36mSubscriber Load (0.6ms)[0m  [1m[34mSELECT "subscribers".* FROM "subscribers"[0m
+  ↳ app/views/subscribers/index.html.erb:20
+  Rendered subscribers/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 133ms (Views: 127.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subscribers" for 127.0.0.1 at 2019-02-26 17:30:45 +0900
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  [1m[36mSubscriber Load (0.3ms)[0m  [1m[34mSELECT "subscribers".* FROM "subscribers"[0m
+  ↳ app/views/subscribers/index.html.erb:20
+  Rendered subscribers/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-26 17:30:46 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (4.6ms)
+  Rendered shared/_navigation.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (1.9ms)
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:30:46 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:30:47 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (4.0ms)
+Completed 200 OK in 96ms (Views: 93.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:36:49 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.7ms)
+  Rendered shared/_footer.html.erb (1.8ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:36:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.7ms)
+  Rendered shared/_footer.html.erb (2.0ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-26 17:36:54 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (6.1ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:36:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (1.9ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-26 17:44:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (20.5ms)
+  Rendered shared/_navigation.html.erb (3.2ms)
+  Rendered shared/_footer.html.erb (7.7ms)
+Completed 200 OK in 140ms (Views: 128.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-26 17:47:02 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (3.5ms)
+Completed 200 OK in 180ms (Views: 177.2ms | ActiveRecord: 0.2ms)
+
+
