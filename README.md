@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+PC
+MacBookPro2017
 
-Things you may want to cover:
+OS
+macOS Mojave
 
-* Ruby version
+Rubyバージョン
+2.5.3
 
-* System dependencies
+データベース
+Postgre 0.20
 
-* Configuration
+テスト
+なし
 
-* Database creation
+デプロイ環境
+heroku
 
-* Database initialization
+全ページ共通機能
+ナビバー(各トップページ、記事ページ、新規ユーザー作成サインイン、サインアウトのリンク)
+フッター(購読者登録、各SNSへのリンク)
+チャットサービス-Drift(https://www.drift.com/)
 
-* How to run the test suite
+トップページ
+入り口ボタン
 
-* Services (job queues, cache servers, search engines, etc.)
+記事ページ(/articles)
+一般ユーザー詳細ページ(SHOW)
+管理者ユーザー編集、削除(Edit, Delete)
 
-* Deployment instructions
+記事詳細ページ(/articles/article_id)
+コメント機能
 
-* ...
+記事編集ページ(/articles/article_id/edit)
+記事編集ページ管理者のみに表示かつ編集可能
+
+購読者リストページ(/subscribers)
+管理者のみに表示、ブログ購読者のリスト
+
+ユーザー作成ページ
+ユーザー作成(ID, email, password, password_confirmation)
