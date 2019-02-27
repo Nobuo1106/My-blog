@@ -11,15 +11,12 @@
       <li class="nav-item">
         <%= active_link_to 'ブログ', 'articles', 'index', articles_path, "active_nav-link" %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
       <% if current_user && current_user.admin? %>
         <li class="nav-link">
-          <%= active_link_to '購読者一覧', '購読者','記事一覧', subscribers_path, "active_nav-link" %>
+          <%= active_link_to '購読者一覧', 'subscribers','index', subscribers_path, class:"active_nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'サインアウト', session_path('active'), method: :delete, class: "active_nav-link"%>
+          <%= link_to 'サインアウト', session_path('active'), method: :delete, class:"active_nav-link"%>
         </li>
         <li class="nav-link">
           <%= current_user.userid %>様
