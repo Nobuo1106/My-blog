@@ -40,4 +40,4 @@ heroku
 管理者のみに表示、ブログ購読者のリスト
 
 ユーザー作成ページ
-ユーザー作成(ID, email, password, password_confirmation)
+ユーザー作成(ID, email, password, password_confirmation) 
