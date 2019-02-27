@@ -26622,3 +26622,131 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 1033ms (Views: 1030.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/subscribers" for 127.0.0.1 at 2019-02-27 11:18:31 +0900
+Processing by SubscribersController#index as HTML
+  Rendering subscribers/index.html.erb within layouts/application
+  [1m[36mSubscriber Load (0.7ms)[0m  [1m[34mSELECT "subscribers".* FROM "subscribers"[0m
+  ↳ app/views/subscribers/index.html.erb:20
+  Rendered subscribers/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (3.8ms)
+  Rendered shared/_footer.html.erb (1.8ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 2.6ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/igarashinobuo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rake-12.3.2/lib/rake/application.rb:83
+Started GET "/articles" for 127.0.0.1 at 2019-02-27 11:34:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (28.6ms)
+  Rendered shared/_navigation.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (4.6ms)
+Completed 200 OK in 137ms (Views: 126.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-27 11:34:19 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (2.9ms)
+  Rendered shared/_footer.html.erb (2.3ms)
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-27 11:34:20 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered shared/_navigation.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (2.3ms)
+Completed 200 OK in 131ms (Views: 124.7ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/igarashinobuo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rake-12.3.2/lib/rake/application.rb:83
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/igarashinobuo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rake-12.3.2/lib/rake/application.rb:83
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@testing.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/igarashinobuo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rake-12.3.2/lib/rake/application.rb:83
+Started GET "/articles" for 127.0.0.1 at 2019-02-27 12:29:23 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (30.4ms)
+  Rendered shared/_navigation.html.erb (7.1ms)
+  Rendered shared/_footer.html.erb (7.4ms)
+Completed 200 OK in 223ms (Views: 205.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-27 12:29:24 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (3.2ms)
+  Rendered shared/_footer.html.erb (3.2ms)
+Completed 200 OK in 251ms (Views: 245.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-27 12:29:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  Rendered articles/index.html.erb within layouts/application (9.2ms)
+  Rendered shared/_navigation.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (2.1ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@testing.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/igarashinobuo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rake-12.3.2/lib/rake/application.rb:83
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@testing.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+Started GET "/welcome/index" for 127.0.0.1 at 2019-02-27 15:03:24 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered shared/_navigation.html.erb (10.4ms)
+  Rendered shared/_footer.html.erb (5.6ms)
+Completed 200 OK in 118ms (Views: 108.8ms | ActiveRecord: 1.1ms)
+
+
