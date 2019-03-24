@@ -43,11 +43,11 @@ heroku
 ユーザー作成(ID, email, password, password_confirmation)   
 
 管理者ユーザー ID  
-admin  
+admin    
 管理者ユーザーパスワード   
-adminpw
+adminpw  
 
 一般ユーザー ID  
-test1
+test1  
 一般ユーザー　パスワード  
 test1pass  
