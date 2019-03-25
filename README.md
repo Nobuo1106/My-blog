@@ -41,3 +41,13 @@ heroku
 
 ユーザー作成ページ  
 ユーザー作成(ID, email, password, password_confirmation)   
+
+管理者ユーザー ID  
+admin    
+管理者ユーザーパスワード   
+adminpw  
+
+一般ユーザー ID  
+test1  
+一般ユーザー　パスワード  
+test1pass  
